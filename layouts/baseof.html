@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ block "title" . }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <link rel="stylesheet" href="{{ "style.css" | relURL }}">
+</head>
+<body>
+  <nav>
+    <a href="{{ .Site.Home.RelPermalink }}">{{ .Site.Title }}</a>
+    {{ range .Site.Menus.main -}}
+    <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{- end }}
+  </nav>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+</body>
+</html>

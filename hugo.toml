@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+
+title = 'Self-Assembly Teams'
+
+disableKinds = ['taxonomy', 'term']
+refLinksErrorLevel = 'WARNING'
+
+[params]
+  description = 'Observations on self-assembling software engineering teams'
+
+[[menu.main]]
+  identifier = 'essays'
+  name = 'Essays'
+  url = '/essays/'
+  weight = 10
